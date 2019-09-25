@@ -1,2 +1,2 @@
-result = "hello"
-return result
+verb = event['request']['method']
+return verb
