@@ -1,0 +1,2 @@
+$value = "Testing";
+return $value;
