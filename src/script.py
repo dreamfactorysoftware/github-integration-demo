@@ -1,2 +1,2 @@
-verb = event['request']['method']
-return verb
+verb = event['request']['method'];
+return verb;
