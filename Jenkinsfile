@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'hello world'
 
-        // POST
+        // POST to Requestbin
         def post = new URL("https://pipedream.com/sources/dc_mXuNZZ").openConnection();
         def message = '{"message":"this is a message"}'
         post.setRequestMethod("POST")
