@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy Stage
+    - uses: satak/webrequest-action@master
+      with:
+        url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/php-github-scripted-service'
+        method: DELETE
+        headers: '{"X-Dreamfactory-API-Key": "74d96caf4ecede5f03df24d8d3a1b9acda7a1d40c6215849cc38e4be35541949"}'
