@@ -1,22 +1,16 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deployment
-      - name: Deploy Stage
-        uses: fjogeleit/http-request-action@master
-        with:
-          url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/php-github-scripted-service'
-          method: 'DELETE'
-          customHeaders:
-            'X-Dreamfactory-API-Key': '74d96caf4ecede5f03df24d8d3a1b9acda7a1d40c6215849cc38e4be35541949'
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy Stage
+    - uses: satak/webrequest-action@master
+      with:
+        url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/php-github-scripted-service'
+        method: DELETE
+        headers: '{"X-Dreamfactory-API-Key": "74d96caf4ecede5f03df24d8d3a1b9acda7a1d40c6215849cc38e4be35541949"}'
