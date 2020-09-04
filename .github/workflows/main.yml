@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Deploy Stage
-    - uses: satak/webrequest-action@master
+      uses: satak/webrequest-action@master
       with:
         url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/php-github-scripted-service'
         method: DELETE
