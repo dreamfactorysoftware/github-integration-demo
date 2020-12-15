@@ -11,6 +11,6 @@ jobs:
     - name: Deploy Stage
       uses: satak/webrequest-action@master
       with:
-        url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/php-github-scripted-service'
+        url: 'https://demo.dreamfactory.com/api/v2/system/cache/_event/mysql._table.employees.get.post_process'
         method: DELETE
         headers: '{"X-Dreamfactory-API-Key": "${{ secrets.CACHE_DELETION_TOKEN }}"}'
