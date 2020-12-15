@@ -10,7 +10,7 @@ foreach ($responseBody['resource'] as $n => $record) {
 	];
 	unset($record["first_name"]);
 	unset($record["last_name"]);
-    unset($record["hire_date"]);
+ //   unset($record["hire_date"]);
 	$responseBody['resource'][$n] = $record;
 }
 
