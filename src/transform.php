@@ -1,6 +1,7 @@
 //========================
 //Transform a response
 //======================== 
+//
 $responseBody = $event['response']['content'];
 
 foreach ($responseBody['resource'] as $n => $record) {
